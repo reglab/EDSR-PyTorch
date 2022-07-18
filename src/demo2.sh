@@ -8,4 +8,4 @@
 #SBATCH --mem=16GB
 #SBATCH --gres=gpu:1
 
-singularity exec --nv $GROUP_HOME/singularity/rgb-building1.sif python3 main.py --data_test Demo --scale 4 --pre_train ../models/EDSR_x2.pt --test_only --save_results
+singularity exec --nv $GROUP_HOME/singularity/rgb-building1.sif python3 main.py --model EDSR --scale 4 --save edsr_x4 --n_resblocks 32 --n_feats 256 --res_scale 0.1 --reset --pre_train ../models/EDSR_x2.pt
