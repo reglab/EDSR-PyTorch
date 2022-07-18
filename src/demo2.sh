@@ -8,4 +8,4 @@
 #SBATCH --mem=16GB
 #SBATCH --gres=gpu:1
 
-singularity exec --nv $GROUP_HOME/singularity/rgb-building1.sif python3 main.py --data_test Demo --scale 4 --pre_train download --test_only --save_results
+singularity exec --nv $GROUP_HOME/singularity/cafo_permit+tcm_11-28-21.sif python3 main.py --data_test Demo --scale 4 --pre_train download --test_only --save_results
